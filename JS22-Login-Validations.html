@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Login Page</title>
+<script>
+    function loginValidate(){
+        var n1=document.myForm.n_word.value;
+        var p1=document.myForm.p_word.value;
+        if(n1==null||n1==" "){
+            alert("Name can't be blank");
+            return false;
+        }
+        else if(p1.length<6){
+            alert("please enter 6 letters");
+            return false;
+        }
+        return true;
+    }
+</script>
+</head>
+<body>
+    <form name="myForm" action="success.html" onsubmit="return loginValidate(this)">
+        UserName: <input type="text" name="n_word"><br>
+        Password: <input type="password" name="p_word"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
